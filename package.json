@@ -1,0 +1,12 @@
+{
+        "name": "league-api",
+        "version": "1.0",
+        "description": "wrapper for RIOT games official League of Legends API",
+        "keywords": ["league", "riot", "riot games", "league of legends", "lol", "lol api", "api", "wrapper", "league api"],
+        "author": {
+                "name" : "Spencer Moran",
+                "email": "smoran02@gmail.com"
+        },
+        "main": "league-api.js",
+        "repository": "https://github.com/smoran02/league-api"
+}
