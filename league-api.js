@@ -11,7 +11,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -23,7 +27,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -35,7 +43,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -47,7 +59,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -59,7 +75,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -71,7 +91,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -83,7 +107,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -95,7 +123,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -107,7 +139,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -119,7 +155,11 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   },
@@ -131,11 +171,14 @@ function League(k) {
         data += chunk.toString();
       });
       res.on('end', function(){
-        cb(JSON.parse(data));
+				try {
+					cb(null, JSON.parse(data));
+				} catch (err) {
+					cb(err);
+				}
       });
     });
   }
 }
-
 
 module.exports = League;
