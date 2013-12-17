@@ -14,7 +14,7 @@ function League(k) {
         cb(JSON.parse(data));
       });
     });
-  },r
+  },
 
   this.getLeagues = function(region, summoner_id, cb) {
     var data = "";
