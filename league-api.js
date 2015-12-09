@@ -6,7 +6,7 @@ function League(k) {
   
 League.prototype.getChampions = function(region, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/champion?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.2/champion?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -22,7 +22,7 @@ League.prototype.getChampions = function(region, cb) {
 
 League.prototype.getLeagues = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/'+region+'/v2.1/league/by-summoner/'+summoner_id+'?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/'+region+'/v2.5/league/by-summoner/'+summoner_id+'?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -38,7 +38,7 @@ League.prototype.getLeagues = function(region, summoner_id, cb) {
 
 League.prototype.getGames = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/game/by-summoner/'+summoner_id+'/recent?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.3/game/by-summoner/'+summoner_id+'/recent?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -54,7 +54,7 @@ League.prototype.getGames = function(region, summoner_id, cb) {
 
 League.prototype.getStatSummary = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/stats/by-summoner/'+summoner_id+'/summary?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.3/stats/by-summoner/'+summoner_id+'/summary?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -70,7 +70,7 @@ League.prototype.getStatSummary = function(region, summoner_id, cb) {
 
 League.prototype.getRankedStats = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/stats/by-summoner/'+summoner_id+'/ranked?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.3/stats/by-summoner/'+summoner_id+'/ranked?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -86,7 +86,7 @@ League.prototype.getRankedStats = function(region, summoner_id, cb) {
 
 League.prototype.getSummonerMasteries = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/summoner/'+summoner_id+'/masteries?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.4/summoner/'+summoner_id+'/masteries?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -102,7 +102,7 @@ League.prototype.getSummonerMasteries = function(region, summoner_id, cb) {
 
 League.prototype.getSummonerRunes = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/summoner/'+summoner_id+'/runes?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.4/summoner/'+summoner_id+'/runes?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -118,7 +118,7 @@ League.prototype.getSummonerRunes = function(region, summoner_id, cb) {
 
 League.prototype.getSummonerByName = function(region, summoner_name, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/summoner/by-name/'+summoner_name+'?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.4/summoner/by-name/'+summoner_name+'?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -134,7 +134,7 @@ League.prototype.getSummonerByName = function(region, summoner_name, cb) {
 
 League.prototype.getSummonerById = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/summoner/'+summoner_id+'?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.4/summoner/'+summoner_id+'?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -150,7 +150,7 @@ League.prototype.getSummonerById = function(region, summoner_id, cb) {
 
 League.prototype.getSummonerNameList = function(region, summoner_ids, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.1/summoner/'+summoner_ids+'/name?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/lol/'+region+'/v1.4/summoner/'+summoner_ids+'/name?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
@@ -166,7 +166,7 @@ League.prototype.getSummonerNameList = function(region, summoner_ids, cb) {
 
 League.prototype.getTeams = function(region, summoner_id, cb) {
 	var data = "";
-	https.get('https://prod.api.pvp.net/api/'+region+'/v2.1/team/by-summoner/'+summoner_id+'?api_key='+this.key, function(res) {
+	https.get('https://prod.api.pvp.net/api/'+region+'/v2.4/team/by-summoner/'+summoner_id+'?api_key='+this.key, function(res) {
 		res.on('data', function(chunk){
 			data += chunk.toString();
 		});
