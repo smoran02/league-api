@@ -1,7 +1,7 @@
 League-api
 =========
 
-League-api is a Node.js wrapper for the official RIOT games League of Legends API. Pull requests and feedback are welcome!
+This module has ALL the functionality of RIOT's API, in a clear and easy to use format! League-api is a Node.js wrapper for the official RIOT games League of Legends API. Pull requests and feedback are welcome!
 
 ##Installation
 
@@ -24,30 +24,8 @@ To initialize the module with your api key, use:
 
 Each method takes as parameters some combination of a region, summoner id, summoner name, and then all methods have a callback function as a parameter. Here is an example call to retrieve the stat summary for a given id:
 
-    league.getStatSummary('na', '5908', function(data) {
+    league.getRecentGames('na', '5908', function(data) {
         console.log(data);
     });
 
-Here is a list of all the methods in the module. `region`, `summoner id`, and `summoner_name` are all of type String. `summoner_ids` is a comma delineated string of summoner ids:
-
-    getChampions(region, callback);
-
-    getLeagues(region, summoner_id, callback);
-
-    getGames(region, summoner_id, callback);
-
-    getStatSummary(region, summoner_id, callback);
-
-    getRankedStats(region, summoner_id, callback);
-
-    getSummonerMasteries(region, summoner_id, callback);
-
-    getSummonerRunes(region, summoner_id, callback);
-
-    getSummonerByName(region, summoner_name, callback);
-
-    getSummonerById(region, summoner_id, callback);
-
-    getSummonerNameList(region, summoner_ids, callback);
-
-    getTeams(region, summoner_id, callback);
+All the functionality of the RIOT League of Legends API is included, and the code is clear to read and modify if you want to add functionality on top of what RIOT offers.
